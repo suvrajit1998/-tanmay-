@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 const Features = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  // const [hidden, setHidden] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -44,7 +44,7 @@ const Features = () => {
       <Paper>
         <SpeedDial
           className={classes.speedDial}
-          hidden={hidden}
+          hidden={false}
           icon={<SpeedDialIcon />}
           ariaLabel="speedDial"
           open={open}
