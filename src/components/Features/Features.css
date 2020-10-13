@@ -1,0 +1,15 @@
+.features {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  top: -100px;
+  z-index: 100;
+}
+
+.features_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

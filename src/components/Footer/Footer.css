@@ -1,0 +1,32 @@
+.footer_background {
+  background-image: url(https://i.ibb.co/3SgcFPQ/unnamed.jpg);
+  object-fit: contain;
+  overflow-wrap: break-word;
+}
+
+.footer-copyright {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.display_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display_flex > * {
+  margin: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  transition: all 250ms;
+}
+
+a:hover {
+  text-decoration: none;
+  color: aqua;
+  text-shadow: 5px 5px 5px #000;
+}
