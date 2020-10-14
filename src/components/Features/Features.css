@@ -7,6 +7,10 @@
   z-index: 100;
 }
 
+.MuiButtonBase-root {
+  outline: none !important;
+}
+
 .features_title {
   display: flex;
   justify-content: center;

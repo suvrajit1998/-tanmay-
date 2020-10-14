@@ -73,7 +73,7 @@ const Header = (props) => {
           </IconButton>
         </div>
         <Divider />
-        <List>
+        <List className="drawer_list">
           <ListItem>
             <Button
               color="inherit"
@@ -173,7 +173,7 @@ const Header = (props) => {
                 />
               </IconButton>
               <Typography className="header_brand_name" variant="h6">
-                EAGLE REBIRTH
+                AUMVKS
               </Typography>
             </div>
             <Hidden smDown>
@@ -203,7 +203,7 @@ const Header = (props) => {
             </Hidden>
             <Hidden mdUp>
               <IconButton
-                style={{ color: "#fff" }}
+                style={{ color: "#fff", outline: "none" }}
                 aria-label="Open Drawer"
                 adge="start"
                 onClick={() => setOpen(!open)}

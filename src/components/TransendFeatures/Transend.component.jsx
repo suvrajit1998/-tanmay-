@@ -26,7 +26,7 @@ const Transend = () => {
                   EAGLE REBIRTH RETREAT
                 </Typography>
                 <Typography style={{ padding: "10px 0" }} variant="subtitle1">
-                  Awaken Your Self for the Huamanity
+                  Awaken Your Self for the Humanity
                 </Typography>
                 <Typography
                   style={{ padding: "10px 0" }}
@@ -59,10 +59,10 @@ const Transend = () => {
               />
               <CardContent>
                 <Typography style={{ padding: "10px 0" }} variant="h5">
-                  EAGLE REBIRTH RETREAT
+                  VASUDHAIVA KUTUMBAKAM
                 </Typography>
                 <Typography style={{ padding: "10px 0" }} variant="subtitle1">
-                  Awaken Your Self for the Huamanity
+                  Awaken Your Self for the Humanity
                 </Typography>
                 <Typography
                   style={{ padding: "10px 0" }}

@@ -19,14 +19,14 @@
   margin: 0 5px;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(8, 8, 8);
+.footer_background a {
+  text-decoration: none !important;
+  color: rgb(8, 8, 8) !important;
   transition: all 250ms;
 }
 
-a:hover {
-  text-decoration: none;
-  color: aqua;
+.footer_background a:hover {
+  text-decoration: none !important;
+  color: aqua !important;
   text-shadow: 5px 5px 5px #000;
 }

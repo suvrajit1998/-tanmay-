@@ -15,7 +15,17 @@
   color: white;
 }
 
+.header_items a:hover {
+  color: aqua !important;
+  text-shadow: 5px 5px 5px #000;
+}
+
 .header_brand_name {
   color: white;
   font-weight: bold;
+}
+
+.drawer_list a:hover {
+  color: aqua !important;
+  text-shadow: 5px 5px 5px #000;
 }

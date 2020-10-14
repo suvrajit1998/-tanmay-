@@ -45,7 +45,7 @@ const Features = () => {
         <SpeedDial
           className={classes.speedDial}
           hidden={false}
-          icon={<SpeedDialIcon />}
+          icon={<SpeedDialIcon style={{ outline: "none" }} />}
           ariaLabel="speedDial"
           open={open}
           onOpen={handleOpen}
@@ -129,7 +129,7 @@ const Features = () => {
                 margin: "20px 0",
               }}
             >
-              VASUDHAIBA KUTUMBAKAM
+              VASUDHAIVA KUTUMBAKAM
             </Typography>
             <Typography
               variant="body1"
