@@ -5,6 +5,14 @@ import Button from "@material-ui/core/Button";
 
 import ContentItem from "../ContentItem/ContentItem.component";
 
+//images
+import image1 from "../../assets/instaimage1.jpg";
+import image2 from "../../assets/instaimage2.jpg";
+import image3 from "../../assets/instaimage3.jpg";
+import image4 from "../../assets/instaimage4.jpg";
+import image5 from "../../assets/instaimage5.jpg";
+import image6 from "../../assets/instaimage6.jpg";
+
 const Content = () => {
   return (
     <Grid
@@ -22,32 +30,32 @@ const Content = () => {
       <Grid container spacing={2} style={{ margin: "10px 0" }}>
         <Grid item sm={4} xs={12}>
           <ContentItem
-            image="https://images.unsplash.com/photo-1535365860506-d8b700079e59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=859&q=80"
+            image={image1}
             title="Awareness is the dreamlight of yours darkness..."
           />
         </Grid>
         <Grid item sm={4} xs={12}>
           <ContentItem
-            image="https://images.unsplash.com/photo-1600677476910-8ec5a174131f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            image={image2}
             title="চলুন আমরা সবাই মিলে অংশগ্রহণ করি...."
           />
         </Grid>
         <Grid item sm={4} xs={12}>
           <ContentItem
-            image="https://images.unsplash.com/photo-1599843533756-8d3aac8ff16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"
+            image={image3}
             title="আমরা সবাই উপভোগ করবো... চলুন না সবাই মিলে অংশগ্রহণ করি এবং যুক্ত হই ফেসবুক গ্রুপ, Vasudhaiva Kutumbakam:The Whole World is a Family তে...."
           />
         </Grid>
       </Grid>
       <Grid container spacing={3} style={{ marginBottom: 30 }}>
         <Grid item sm={4} xs={12}>
-          <ContentItem image="https://images.unsplash.com/photo-1598338430862-3e3098daa722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" />
+          <ContentItem image={image4} />
         </Grid>
         <Grid item sm={4} xs={12}>
-          <ContentItem image="https://images.unsplash.com/photo-1585251173750-5f70048aca65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+          <ContentItem image={image5} />
         </Grid>
         <Grid item sm={4} xs={12}>
-          <ContentItem image="https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+          <ContentItem image={image6} />
         </Grid>
       </Grid>
       <Button

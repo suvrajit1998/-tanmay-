@@ -7,6 +7,10 @@ import Carousel from "react-bootstrap/Carousel";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import world_image from "../../assets/1.jpg";
+import image1 from "../../assets/Vasudhaiva-kutumbakam.jpg";
+import image2 from "../../assets/vasudheva-ku (1).jpg";
+
 const Parallax = () => {
   const [index, setindex] = useState(0);
 
@@ -25,7 +29,7 @@ const Parallax = () => {
           <img
             className="d-block w-100 parallax"
             alt="first-slide"
-            src="https://images.unsplash.com/photo-1565569995015-414d4ef36690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            src={image1}
           />
           <Carousel.Caption style={{ bottom: "40%" }}>
             <Typography variant="h5">VASUDHAIVA KUTUMBAKAM</Typography>
@@ -39,7 +43,7 @@ const Parallax = () => {
           <img
             className="d-block w-100 parallax"
             alt="first-slide"
-            src="https://images.unsplash.com/photo-1496267472830-2eb2b7e0942d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1025&q=80"
+            src={world_image}
           />
           <Carousel.Caption style={{ bottom: "40%" }}>
             <Typography variant="h5">VASUDHAIVA KUTUMBAKAM</Typography>
@@ -51,7 +55,7 @@ const Parallax = () => {
           <img
             className="d-block w-100 parallax"
             alt="first-slide"
-            src="https://images.unsplash.com/photo-1508558936510-0af1e3cccbab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            src={image2}
           />
           <Carousel.Caption style={{ bottom: "40%" }}>
             <Typography variant="h5">VASUDHAIVA KUTUMBAKAM</Typography>

@@ -11,6 +11,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
+import { Button, colors } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -19,6 +20,10 @@ const useStyles = makeStyles({
   },
   margins: {
     margin: "20px 0",
+    fontFamily: "David Libre, serif",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   introduction: {
     margin: "10px 20px",
@@ -48,12 +53,19 @@ const Introduction = () => {
   const classes = useStyles();
   return (
     <div className={classes.introduction}>
-      <Typography variant="h4" className={classes.margins} align="center">
-        HERE’S WHAT’S NEW
-      </Typography>
-      <Typography variant="body1" className={classes.margins} align="center">
-        Don’t Be the Last to Know!
-      </Typography>
+      <div className={classes.margins}>
+        <div>
+          <Typography variant="body1" align="left">
+            HERE’S WHAT’S NEW
+          </Typography>
+          <Typography variant="caption" align="left">
+            Don’t Be the Last to Know!
+          </Typography>
+        </div>
+        <Button style={{ background: colors.pink["500"] }} variant="contained">
+          View All
+        </Button>
+      </div>
       <Grid container spacing={1}>
         <Grid item sm={4} xs={12}>
           <Card
@@ -88,9 +100,8 @@ const Introduction = () => {
                   color="textSecondary"
                   className={classes.margins}
                 >
-                  If you are suffering from physical and mental pains... If you
-                  suffering from depression... If you suffering loneliness in
-                  your oldage,
+                  For Overall Health, Happiness, Peace, Prosperity, Love, Energy
+                  and Consciousness with Transcending and Awakening Yourself.
                 </Typography>
                 <Typography
                   className={classes.margins}
@@ -130,9 +141,8 @@ const Introduction = () => {
                   color="textSecondary"
                   className={classes.margins}
                 >
-                  If your Child suffering from Mental pain... If your child
-                  facing Health problems... If your child cannot Concentrate on
-                  study... Join Youth Eagle today Transforming Future.
+                  For Overall Health, Happiness, Peace, Prosperity, Love, Energy
+                  and Consciousness with Transcending and Awakening Yourself.
                 </Typography>
               </CardContent>
               <CardMedia
@@ -177,10 +187,8 @@ const Introduction = () => {
                   color="textSecondary"
                   className={classes.margins}
                 >
-                  If you are sufferings from mental pain, Depressions, lack of
-                  Concentration, Relationship and Health issues... Vasudhaiba
-                  Kutumbakam Wellness Course will help you to find Your True
-                  Self.
+                  For Overall Health, Happiness, Peace, Prosperity, Love, Energy
+                  and Consciousness with Transcending and Awakening Yourself.
                 </Typography>
               </CardContent>
             </CardActionArea>

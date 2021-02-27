@@ -9,12 +9,14 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import SpeedDial from "@material-ui/lab/SpeedDial";
 import SpeedDialAction from "@material-ui/lab/SpeedDialAction";
 import SpeedDialIcon from "@material-ui/lab/SpeedDialIcon";
+import { Fab } from "@material-ui/core";
 
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import MailIcon from "@material-ui/icons/Mail";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import Instagram from "@material-ui/icons/Instagram";
+import { ArrowUpward } from "@material-ui/icons";
 
 import Transcend from "../TransendFeatures/Transend.component";
 
@@ -24,12 +26,18 @@ const useStyles = makeStyles({
     top: "34%",
     right: "2%",
   },
+  fab: {
+    position: "fixed",
+    bottom: "3%",
+    right: "2%",
+    zIndex: 100,
+  },
 });
 
 const Features = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  // const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -37,6 +45,19 @@ const Features = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const checkScrollTop = () => {
+    if (!hidden && window.pageYOffset > 400) {
+      setHidden(true);
+    } else if (hidden && window.pageYOffset <= 400) {
+      setHidden(false);
+    }
+  };
+  window.addEventListener("scroll", checkScrollTop);
+
+  const scrollToTop = () => {
+    window.scroll({ top: 0, left: 0 });
   };
 
   return (
@@ -118,6 +139,17 @@ const Features = () => {
             tooltipTitle="WhatsApp => +919088213423"
           />
         </SpeedDial>
+        {hidden && (
+          <Fab
+            color="primary"
+            className={classes.fab}
+            onClick={() => {
+              scrollToTop();
+            }}
+          >
+            <ArrowUpward />
+          </Fab>
+        )}
         <div className="features_title">
           <Grid item md={7} sm={7} xs={12}>
             <Typography

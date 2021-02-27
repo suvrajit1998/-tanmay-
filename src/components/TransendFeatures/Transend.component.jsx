@@ -10,17 +10,20 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
+import { useHistory } from "react-router-dom";
+
+import image1 from "../../assets/Slide8.JPG";
+import image2 from "../../assets/The Cons HUmanity.jpg";
+
 const Transend = () => {
+  const history = useHistory();
   return (
     <div className="transend">
       <Grid container spacing={2} style={{ justifyContent: "space-evenly" }}>
         <Grid item xs={12} sm={6}>
           <Card style={{ maxWidth: 400, margin: "0 auto" }}>
             <CardActionArea>
-              <CardMedia
-                style={{ height: 200 }}
-                image="https://images.unsplash.com/photo-1576815837205-07349c6016e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-              />
+              <CardMedia style={{ height: 200 }} image={image1} />
               <CardContent>
                 <Typography style={{ padding: "10px 0" }} variant="h5">
                   EAGLE REBIRTH RETREAT
@@ -33,8 +36,8 @@ const Transend = () => {
                   variant="body2"
                   color="textSecondary"
                 >
-                  Without Awakening you do not know the depth of life, you only
-                  live the surface of it.
+                  Transcendental Eagle Rebirth Retreat 24th- 27th February 2021
+                  (Register Now)
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -42,7 +45,11 @@ const Transend = () => {
               <Button size="small" color="primary">
                 Share
               </Button>
-              <Button size="small" color="primary">
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => history.push("/transcendental")}
+              >
                 Learn More
               </Button>
             </CardActions>
@@ -52,11 +59,7 @@ const Transend = () => {
         <Grid item sm={6} xs={12} style={{ marginTop: 200 }}>
           <Card style={{ maxWidth: 400, margin: "0 auto" }}>
             <CardActionArea>
-              <CardMedia
-                style={{ height: 200 }}
-                image="https://images.unsplash.com/photo-1474557157379-8aa74a6ef541?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                title="EAGLE REBIRTH RETREAT"
-              />
+              <CardMedia style={{ height: 200 }} image={image2} />
               <CardContent>
                 <Typography style={{ padding: "10px 0" }} variant="h5">
                   VASUDHAIVA KUTUMBAKAM
@@ -69,8 +72,8 @@ const Transend = () => {
                   variant="body2"
                   color="textSecondary"
                 >
-                  Without Awakening you do not know the depth of life, you only
-                  live the surface of it.
+                  Residential Memory, Concentration, Mind Power Development and
+                  Family Counselling- 13th- 14th February 2021
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -78,7 +81,11 @@ const Transend = () => {
               <Button size="small" color="primary">
                 Share
               </Button>
-              <Button size="small" color="primary">
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => history.push("/residentail-memory")}
+              >
                 Learn More
               </Button>
             </CardActions>

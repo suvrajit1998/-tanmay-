@@ -18,6 +18,15 @@ import Slide from "@material-ui/core/Slide";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import {
+  Home,
+  MenuBook,
+  GroupAdd,
+  Widgets,
+  Book,
+  Store,
+  MoreHoriz,
+} from "@material-ui/icons";
 
 import { Link } from "react-router-dom";
 
@@ -41,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: { flexGrow: 1 },
   drawerPaper: {
-    width: 240,
+    width: "80%",
   },
   toolbar: theme.mixins.toolbar,
   drawerHeader: {
@@ -50,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
   },
 }));
 
@@ -64,13 +73,39 @@ const Header = (props) => {
       <div className={classes.toolbar}>
         <Divider />
         <div className={classes.drawerHeader}>
-          <IconButton onClick={() => setOpen(false)}>
-            {theme.direction === "ltr" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginRight: "5%",
+              width: "100%",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 1rem",
+              }}
+            >
+              <img
+                src="https://i.ibb.co/8x6kX6j/MSEF-Logo.png"
+                width={50}
+                alt="logo"
+                style={{ marginRight: ".5rem" }}
+              />
+              <Typography variant="body1">VASUDHAIVA KUTUMBAKAM</Typography>
+            </div>
+            <IconButton onClick={() => setOpen(false)}>
+              {theme.direction === "rtl" ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon />
+              )}
+            </IconButton>
+          </div>
         </div>
         <Divider />
         <List className="drawer_list">
@@ -79,6 +114,7 @@ const Header = (props) => {
               color="inherit"
               onClick={() => setOpen(false)}
               component={Link}
+              startIcon={<Home />}
               to="/"
             >
               HOME
@@ -90,7 +126,20 @@ const Header = (props) => {
               color="inherit"
               onClick={() => setOpen(false)}
               component={Link}
+              to="booking"
+              startIcon={<Book />}
+            >
+              BOOK ONLINE
+            </Button>
+          </ListItem>
+          <Divider />
+          <ListItem>
+            <Button
+              color="inherit"
+              onClick={() => setOpen(false)}
+              component={Link}
               to="/menu"
+              startIcon={<MenuBook />}
             >
               MENU
             </Button>
@@ -102,6 +151,7 @@ const Header = (props) => {
               onClick={() => setOpen(false)}
               component={Link}
               to="/members"
+              startIcon={<GroupAdd />}
             >
               MEMBERS
             </Button>
@@ -113,6 +163,7 @@ const Header = (props) => {
               onClick={() => setOpen(false)}
               component={Link}
               to="blog"
+              startIcon={<Widgets />}
             >
               BLOG
             </Button>
@@ -124,21 +175,12 @@ const Header = (props) => {
               onClick={() => setOpen(false)}
               component={Link}
               to="shop"
+              startIcon={<Store />}
             >
               SHOP
             </Button>
           </ListItem>
-          <Divider />
-          <ListItem>
-            <Button
-              color="inherit"
-              onClick={() => setOpen(false)}
-              component={Link}
-              to="booking"
-            >
-              BOOK ONLINE
-            </Button>
-          </ListItem>
+
           <Divider />
           <ListItem>
             <Button
@@ -146,6 +188,7 @@ const Header = (props) => {
               onClick={() => setOpen(false)}
               component={Link}
               to="more"
+              startIcon={<MoreHoriz />}
             >
               MORE
             </Button>
@@ -160,6 +203,16 @@ const Header = (props) => {
       <HideOnScroll {...props}>
         <AppBar color="primary">
           <Toolbar>
+            <Hidden mdUp>
+              <IconButton
+                style={{ color: "#fff", outline: "none" }}
+                aria-label="Open Drawer"
+                adge="start"
+                onClick={() => setOpen(!open)}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
             <div className="header_brand">
               <IconButton
                 component={Link}
@@ -201,22 +254,12 @@ const Header = (props) => {
                 </Button>
               </div>
             </Hidden>
-            <Hidden mdUp>
-              <IconButton
-                style={{ color: "#fff", outline: "none" }}
-                aria-label="Open Drawer"
-                adge="start"
-                onClick={() => setOpen(!open)}
-              >
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <Drawer
         variant="temporary"
-        anchor="right"
+        anchor="left"
         open={open}
         onClose={() => setOpen(!open)}
         classes={{ paper: classes.drawerPaper }}
