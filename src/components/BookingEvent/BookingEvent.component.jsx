@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Card,
   TextField,
@@ -85,9 +85,9 @@ const BookingEvent = () => {
     paymentImage: "",
   });
 
-  useEffect(() => {
-    setUser({ ...user, paymentImage: localStorage.getItem("payment-image") });
-  }, []);
+  // useEffect(() => {
+  //   setUser({ ...user, paymentImage: localStorage.getItem("payment-image") });
+  // }, []);
 
   const [Disease, setDisease] = useState({
     Asthma: false,
